@@ -1,3 +1,6 @@
+val AkkaVersion = "2.8.3"
+val AlpakkaVersion = "6.0.1"
+
 lazy val root = (project in file("."))
   .settings(
     name := "Shift",
@@ -6,6 +9,12 @@ lazy val root = (project in file("."))
     maxErrors := 3,
     startYear := Some(2023),
     libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+      "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+      "com.lightbend.akka" %% "akka-stream-alpakka-file" % AlpakkaVersion,
+      "com.lightbend.akka" %% "akka-stream-alpakka-csv" % AlpakkaVersion,
+      "com.typesafe.akka" %% "akka-stream-testkit" % AkkaVersion % Test,
+      "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test,
       "ch.qos.logback" % "logback-classic" % "1.4.7",
       "org.scalatest" %% "scalatest" % "3.2.15" % Test
     ),
@@ -41,7 +50,7 @@ val publishSettings = Seq(
   developers := List(
     Developer("crotodev",
               "Christian Rotondo",
-              "chris.rotondo@zohomail.com",
+              "chris.rotondo6@gmail.com",
               url("https://github.com/crotodev")
     )
   ),
