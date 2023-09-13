@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package app.cloud7.shift
+package app.cloud7.shift.core
 
 /**
  * Represents an exchange code.

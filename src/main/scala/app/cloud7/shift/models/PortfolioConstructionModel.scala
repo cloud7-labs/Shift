@@ -16,7 +16,7 @@
 
 package app.cloud7.shift.models
 
-import app.cloud7.shift.Portfolio
+import app.cloud7.shift.core.Portfolio
 
 /**
  * Represents a portfolio construction model.
