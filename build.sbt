@@ -11,6 +11,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
       "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+      "com.typesafe.akka" %% "akka-stream-typed" % AkkaVersion,
       "com.lightbend.akka" %% "akka-stream-alpakka-file" % AlpakkaVersion,
       "com.lightbend.akka" %% "akka-stream-alpakka-csv" % AlpakkaVersion,
       "com.typesafe.akka" %% "akka-stream-testkit" % AkkaVersion % Test,
@@ -28,7 +29,8 @@ lazy val root = (project in file("."))
       "-Xlint:_,-missing-interpolator",
       "-Yno-adapted-args",
       "-Ywarn-unused-import",
-      "-Xfuture"
+      "-Xfuture",
+      "-Xsource:2"
     ),
     assembly / assemblyMergeStrategy := {
       case "module-info.class" => MergeStrategy.discard
